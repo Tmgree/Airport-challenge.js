@@ -12,13 +12,15 @@ describe("Plane", function() {
   });
 
   it("should change in flight to false when a plane has landed", function() {
-     airport.land(plane)
+     airport.land(plane);
      expect(plane.in_flight).toEqual(false);
   });
 
   it("should change in flight to true when a plane has taken off", function() {
-     airport.land(plane)
-     airport.take_off(plane)
+    var airport;
+    airport = new Airport();
+     airport.land(plane);
+     airport.take_off(plane);
      expect(plane.in_flight).toEqual(true);
   });
 
